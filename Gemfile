@@ -38,4 +38,6 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 
+gem 'rspec-rails'
+
 gem 'therubyracer'

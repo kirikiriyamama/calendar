@@ -3,11 +3,11 @@ class Task < ActiveRecord::Base
 
   belongs_to :schedule
 
-  validate :schedule_id,
+  validates :schedule_id,
     :presence => true
-  validate :content,
-    :presence => true
+  validates :content,
+    :presence => true,
     :length => { :maximum => 255, :allow_blank => true }
-  validate :complete,
+  validates :complete,
     :presence => true
 end

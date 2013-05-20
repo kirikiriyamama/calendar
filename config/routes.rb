@@ -1,8 +1,8 @@
 Calendar::Application.routes.draw do
-  get "calendar/index"
+  root :to => "calendar#index", :via => :get, :as => :calendar
+  #match "/" => "calendar#index", :as => :calendar
 
   resources :tasks
-
 
   resources :schedules
 

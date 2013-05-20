@@ -38,6 +38,8 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 
+gem 'therubyracer'
+
 gem 'rspec-rails'
 
-gem 'therubyracer'
+gem 'fullcalendar-rails'

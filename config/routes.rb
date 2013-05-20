@@ -1,4 +1,6 @@
 Calendar::Application.routes.draw do
+  get "calendar/index"
+
   resources :tasks
 
 

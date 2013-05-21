@@ -2,10 +2,9 @@ class SchedulesController < ApplicationController
   # GET /schedules
   # GET /schedules.json
   def index
-    @schedules = Schedule.all
+    @schedules = Schedule.select("id, deadline_at as start, summary as title")
 
     respond_to do |format|
-      format.html # index.html.erb
       format.json { render json: @schedules }
     end
   end

@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.ui.draggable
 //= require bootstrap
 //= require fullcalendar
 //= require_tree .

@@ -5,7 +5,7 @@ $ ->
   $('#calendar').fullCalendar
     firstDay: 1
     timeFormat:
-      '': 'H:mm '
+      '': 'HH:mm '
     buttonText:
       today: 'this month'
 

@@ -5,6 +5,7 @@ class SchedulesController < ApplicationController
     @schedules = Schedule.select("id, deadline_at as start, summary as title")
 
     respond_to do |format|
+      format.html { render :nothing => true }
       format.json { render json: @schedules }
     end
   end

@@ -3,12 +3,11 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 $ ->
   $('#calendar').fullCalendar
-    buttonText:
-      today: 'this month'
-
     firstDay: 1
     timeFormat:
       '': 'H:mm '
+    buttonText:
+      today: 'this month'
 
     selectable: true
     select: ->

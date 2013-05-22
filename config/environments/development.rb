@@ -34,4 +34,8 @@ Calendar::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # sass
+  config.sass.preferred_syntax = :sass
+  config.sass.syntax = :sass
 end

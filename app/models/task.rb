@@ -1,13 +1,9 @@
 class Task < ActiveRecord::Base
-  attr_accessible :complete, :content, :schedule_id
-
   belongs_to :schedule
 
-  validates :schedule_id,
-    :presence => true
+  validates_presence_of :schedule_id,
+  validates_inclusion_of :complete, :in => [true, false]
   validates :content,
     :presence => true,
     :length => { :maximum => 255, :allow_blank => true }
-  validates :complete,
-    :presence => true
 end

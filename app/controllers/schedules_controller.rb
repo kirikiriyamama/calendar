@@ -83,6 +83,8 @@ class SchedulesController < ApplicationController
   private
 
   def schedule_params
-    params.require(:schedule).permit(:description, :notes, :deadline_at, :summary)
+    params.require(:schedule).
+      permit(:description, :notes, :deadline_at, :summary,
+             tasks_attributes: [:id, :schedule_id, :content, :complete, :_destroy] )
   end
 end

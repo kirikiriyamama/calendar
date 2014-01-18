@@ -40,7 +40,7 @@ class SchedulesController < ApplicationController
   # POST /schedules
   # POST /schedules.json
   def create
-    @schedule = Schedule.new(params[:schedule])
+    @schedule = Schedule.new(schedule_params)
 
     respond_to do |format|
       if @schedule.save
@@ -59,7 +59,7 @@ class SchedulesController < ApplicationController
     @schedule = Schedule.find(params[:id])
 
     respond_to do |format|
-      if @schedule.update_attributes(params[:schedule])
+      if @schedule.update_attributes(schedule_params)
         format.html { redirect_to @schedule, notice: 'Schedule was successfully updated.' }
         format.json { head :no_content }
       else
@@ -79,5 +79,11 @@ class SchedulesController < ApplicationController
       format.html { redirect_to schedules_url }
       format.json { head :no_content }
     end
+  end
+
+  private
+
+  def schedule_params
+    params.require(:schedule).permit(:description, :notes, :deadline_at, :summary)
   end
 end

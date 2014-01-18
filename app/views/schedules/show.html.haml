@@ -11,6 +11,13 @@
 %p
   %b Notes:
   = @schedule.notes
+%p
+  %b Tasks:
+  %ul.fa-ul
+    - @schedule.tasks.each do |task|
+      %li
+        %i.fa-li.fa{ class: task.complete ? "fa-check-square" : "fa-square" }
+        = task.content
 = link_to 'Edit', edit_schedule_path(@schedule)
 |
 = link_to 'Back', "/"

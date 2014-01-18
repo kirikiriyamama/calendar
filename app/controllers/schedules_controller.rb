@@ -5,7 +5,6 @@ class SchedulesController < ApplicationController
     @schedules = Schedule.select("id, deadline_at as start, summary as title")
 
     respond_to do |format|
-      format.html { render :nothing => true }
       format.json { render json: @schedules }
     end
   end
@@ -76,7 +75,7 @@ class SchedulesController < ApplicationController
     @schedule.destroy
 
     respond_to do |format|
-      format.html { redirect_to schedules_url }
+      format.html { redirect_to "/" }
       format.json { head :no_content }
     end
   end

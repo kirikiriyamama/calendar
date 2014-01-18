@@ -4,3 +4,4 @@
   = f.input :deadline_at, :use_month_numbers => true, :minute_step => 10, :input_html => {:class => "input-small"}
   = f.input :notes, :input_html => {:class => "span5", :rows => "5"}
   = f.button :submit, :class => "btn-primary"
+  = link_to "delete", @schedule, :method => :delete, :class => "btn btn-danger"

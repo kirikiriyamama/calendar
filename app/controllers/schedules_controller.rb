@@ -75,7 +75,7 @@ class SchedulesController < ApplicationController
     @schedule.destroy
 
     respond_to do |format|
-      format.html { redirect_to "/" }
+      format.html { redirect_to "/", notice: "削除しました" }
       format.json { head :no_content }
     end
   end
